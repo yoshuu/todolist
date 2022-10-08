@@ -1,0 +1,24 @@
+{
+  "name": "todolist",
+  "version": "1.0.0",
+  "description": "設計圖： https://hexschool.github.io/THE_F2E_Design/todolist/",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass": "sass --watch scss/style.scss:style/style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yoshuu/todolist.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yoshuu/todolist/issues"
+  },
+  "homepage": "https://github.com/yoshuu/todolist#readme",
+  "dependencies": {
+    "sass": "^1.55.0"
+  }
+}

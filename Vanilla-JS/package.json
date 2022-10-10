@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "sass": "sass --watch scss/bootstrap.scss:style/style.css"
+    "sass": "sass --watch scss/custom.scss:style/style.css"
   },
   "repository": {
     "type": "git",
@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/yoshuu/todolist#readme",
   "dependencies": {
+    "bootstrap": "^5.2.2",
     "sass": "^1.55.0"
   }
 }

@@ -1,0 +1,12 @@
+body {
+  background: linear-gradient(
+      180deg,
+      #000 100px,
+      transparent 0%,
+      transparent 90%,
+      #000 0%,
+      #000 100%
+    ),
+    url(../images/bg.jpg);
+  min-width: 375px;
+}

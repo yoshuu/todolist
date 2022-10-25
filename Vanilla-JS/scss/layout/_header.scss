@@ -1,0 +1,35 @@
+@use "../utilities/color";
+
+header {
+  background-color: color.$color-blue100;
+  nav {
+    width: 620px;
+    margin: 0 auto;
+    ul {
+      height: 76px;
+      display: flex;
+      align-items: center;
+    }
+
+    li {
+      width: 220px;
+      text-align: center;
+    }
+
+    .tasks a {
+      color: #fff;
+      padding: 0 10px 16px 10px;
+      border-bottom: 4px solid #000;
+    }
+
+    a {
+      font-size: 24px;
+      color: color.$color-blue200;
+      &:hover {
+        color: #fff;
+        padding: 0 10px 16px 10px;
+        border-bottom: 4px solid #000;
+      }
+    }
+  }
+}

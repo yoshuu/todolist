@@ -1,4 +1,7 @@
+@use "../utilities/color";
+
 body {
   margin: 0;
   min-width: 375px;
+  background-color: color.$color-grey200;
 }

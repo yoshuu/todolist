@@ -48,6 +48,10 @@ header nav a:hover {
   border-bottom: 4px solid #000;
 }
 
+.display_none {
+  display: none;
+}
+
 form {
   margin-top: 24px;
   background-color: #f2f2f2;

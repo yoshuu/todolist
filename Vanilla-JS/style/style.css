@@ -33,7 +33,7 @@ header nav li {
   width: 220px;
   text-align: center;
 }
-header nav .tasks a {
+header nav .active {
   color: #fff;
   padding: 0 10px 16px 10px;
   border-bottom: 4px solid #000;
@@ -140,6 +140,7 @@ main .container .add_task {
   background-color: #fff;
   color: #c8c8c8;
   border: 2px solid #c8c8c8;
+  cursor: pointer;
 }
 
 /*# sourceMappingURL=style.css.map */

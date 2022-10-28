@@ -118,10 +118,12 @@ form .wrap_button button {
 form .wrap_button .cancel {
   color: #d0021b;
   background-color: #fff;
+  cursor: pointer;
 }
 form .wrap_button .add_task_button {
   color: #fff;
   background-color: #4a90e2;
+  cursor: pointer;
 }
 
 main {

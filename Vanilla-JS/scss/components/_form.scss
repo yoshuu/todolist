@@ -76,10 +76,12 @@ form {
     .cancel {
       color: color.$color-danger;
       background-color: #fff;
+      cursor: pointer;
     }
     .add_task_button {
       color: #fff;
       background-color: color.$color-blue100;
+      cursor: pointer;
     }
   }
 }

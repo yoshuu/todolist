@@ -16,74 +16,71 @@
     <header>
       <nav>
         <ul>
-          <li data-name="tasks">
-            <a href="#" class="nav-item active">My Task</a>
-          </li>
-          <li data-name="progress">
-            <a href="#" class="nav-item">In Progress</a>
-          </li>
-          <li data-name="completed">
-            <a href="#" class="nav-item">Completed</a>
-          </li>
+          <li class="nav-item active" data-name="all">my Tasks</li>
+          <li class="nav-item" data-name="inProgress">in progress</li>
+          <li class="nav-item" data-name="completed">completed</li>
         </ul>
       </nav>
     </header>
 
     <main>
-      <div class="container">
-        <button class="add_task"><span>+</span><span>Add Task</span></button>
-        <form>
-          <div class="text_area">
-            <input type="checkbox" />
-            <input type="text" placeholder="Type Something Here..." />
-            <div class="edit_button">
-              <a href="##" class="star">
-                <i class="fa-fw far fa-star"></i>
-              </a>
-              <a href="##" class="pen"
-                ><i class="fa-fw fas fa-pen editState"></i
-              ></a>
+      <div class="todo">
+        <button class="add_task">+ add task</button>
+        <form class="edit_area new_edit_area">
+          <div class="todo_title_box">
+            <label class="todo_title">
+              <input class="checkbox" type="checkbox" />
+              <input
+                class="name new_name"
+                type="text"
+                placeholder="Type Something Here…"
+              />
+            </label>
+            <div class="icon_box">
+              <span class="star"><i class="far fa-star"></i></span>
+              <span class="pen new_pen"><i class="fas fa-pen active"></i></span>
             </div>
           </div>
-          <div class="detail">
-            <div class="deadline">
-              <div class="title">
-                <i class="fa-fw fas fa-calendar-alt"></i>
-                <span>Deadline</span>
+          <div class="card">
+            <div class="card-body">
+              <div class="deadline">
+                <h3><i class="far fa-calendar-alt"></i>Deadline</h3>
+                <div class="input-wrapper">
+                  <input class="new-date" type="date" />
+                  <input class="new-time" type="time" />
+                </div>
               </div>
-              <div class="content">
-                <input type="date" />
-                <input type="time" />
+              <div class="file">
+                <h3><i class="far fa-file"></i>File</h3>
+                <label class="upload">
+                  <input class="upload-input" type="file" />
+                  <span class="upload-icon">+</span>
+                </label>
               </div>
-            </div>
-            <div class="file">
-              <div class="title">
-                <i class="fa-fw far fa-file"></i>
-                <span>File</span>
-              </div>
-              <div class="content">
-                <button class="add_button">+</button>
-              </div>
-            </div>
-            <div class="comment">
-              <div class="title">
-                <i class="fa-fw far fa-comment-dots"></i>
-                <span>Comment</span>
-              </div>
-              <div class="content">
-                <textarea placeholder="meet him at Lorence"></textarea>
+              <div class="comment">
+                <h3><i class="far fa-comment-dots"></i>Comment</h3>
+                <textarea
+                  class="add-comment"
+                  placeholder="Type your memo here..."
+                ></textarea>
               </div>
             </div>
-          </div>
-
-          <div class="wrap_button">
-            <button class="cancel">x Cancel</button>
-            <button class="add_task_button">+ Add Task</button>
+            <div class="card-footer new-card-footer">
+              <button type="submit" class="button-cancel new-button-cancel">
+                <i class="fas fa-times"></i>Cancel
+              </button>
+              <button type="submit" class="button-confirm new-button-confirm">
+                <i class="fas fa-plus"></i>Add Task
+              </button>
+            </div>
           </div>
         </form>
-        <div class="show_item"></div>
       </div>
+      <section class="todo_list" id="list"></section>
+      <h4 class="count"></h4>
     </main>
+
     <script src="./js/mvc.js"></script>
   </body>
+  <style></style>
 </html>

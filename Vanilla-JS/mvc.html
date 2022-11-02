@@ -16,9 +16,15 @@
     <header>
       <nav>
         <ul>
-          <li class="tasks"><a href="#" class="active">My Task</a></li>
-          <li class="progress"><a href="#">In Progress</a></li>
-          <li class="completed"><a href="#">Completed</a></li>
+          <li data-name="tasks">
+            <a href="#" class="nav-item active">My Task</a>
+          </li>
+          <li data-name="progress">
+            <a href="#" class="nav-item">In Progress</a>
+          </li>
+          <li data-name="completed">
+            <a href="#" class="nav-item">Completed</a>
+          </li>
         </ul>
       </nav>
     </header>
@@ -26,10 +32,58 @@
     <main>
       <div class="container">
         <button class="add_task"><span>+</span><span>Add Task</span></button>
-        <div id="root"></div>
+        <form>
+          <div class="text_area">
+            <input type="checkbox" />
+            <input type="text" placeholder="Type Something Here..." />
+            <div class="edit_button">
+              <a href="##" class="star">
+                <i class="fa-fw far fa-star"></i>
+              </a>
+              <a href="##" class="pen"
+                ><i class="fa-fw fas fa-pen editState"></i
+              ></a>
+            </div>
+          </div>
+          <div class="detail">
+            <div class="deadline">
+              <div class="title">
+                <i class="fa-fw fas fa-calendar-alt"></i>
+                <span>Deadline</span>
+              </div>
+              <div class="content">
+                <input type="date" />
+                <input type="time" />
+              </div>
+            </div>
+            <div class="file">
+              <div class="title">
+                <i class="fa-fw far fa-file"></i>
+                <span>File</span>
+              </div>
+              <div class="content">
+                <button class="add_button">+</button>
+              </div>
+            </div>
+            <div class="comment">
+              <div class="title">
+                <i class="fa-fw far fa-comment-dots"></i>
+                <span>Comment</span>
+              </div>
+              <div class="content">
+                <textarea placeholder="meet him at Lorence"></textarea>
+              </div>
+            </div>
+          </div>
+
+          <div class="wrap_button">
+            <button class="cancel">x Cancel</button>
+            <button class="add_task_button">+ Add Task</button>
+          </div>
+        </form>
+        <div class="show_item"></div>
       </div>
     </main>
     <script src="./js/mvc.js"></script>
-    <script src="./js/changeTab.js"></script>
   </body>
 </html>

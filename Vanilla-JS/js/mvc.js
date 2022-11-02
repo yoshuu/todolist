@@ -25,11 +25,9 @@ class Model {
 
 class View {
   constructor() {
-    this.app = this.getElement("#root");
-    this.title = this.createElement("h1");
-    this.title.textContent = "apple";
+    this.navItem = document.querySelectorAll(".nav-item");
 
-    this.app.append(this.title);
+    this.init();
   }
 
   createElement(tag, className) {
@@ -41,13 +39,42 @@ class View {
   getElement(selector) {
     return document.querySelector(selector);
   }
+
+  init() {
+    this.navItems.forEach((navItem, i) => {
+      navItem.addEventListener(
+        "click",
+        this.switchToggle.bind(this.navItems, i)
+      );
+    });
+  }
+  switchToggle(index) {
+    this.forEach((nodeItem) => nodeItem.classList.remove("active"));
+    this[index].classList.toggle("active");
+  }
+  renderTodos(todos) {
+    this.todoList.innerHTML = this.todoItem(todos);
+    this.init();
+  }
+
+  renderTodos = () => {
+    this.view.switchState((e) => {
+      this.state = e.target.dataset.name;
+    });
+  };
 }
 
 class Controller {
   constructor(model, view) {
     this.model = model;
     this.view = view;
+
+    this.init();
   }
+
+  init = () => {
+    this.renderTodos();
+  };
 }
 
 const app = new Controller(new Model(), new View());
